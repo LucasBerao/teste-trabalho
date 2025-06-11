@@ -1,0 +1,18 @@
+# Arquivos de log
+*.log
+
+# Pasta de build do Maven
+target/
+
+# Arquivos de configuração do Eclipse
+.settings/
+.classpath
+.project
+
+# Arquivos de configuração de IDEs
+.idea/
+*.iml
+
+# Arquivos de sistema operacional
+.DS_Store
+Thumbs.db
