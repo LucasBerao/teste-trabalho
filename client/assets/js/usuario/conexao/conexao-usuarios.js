@@ -1,4 +1,4 @@
-const userRouteUrl = 'http://localhost:8080/api/users';
+const userRouteUrl = 'http://localhost:8080/api/usuarios';
 
 function findAllUsers(processData) {
     fetch(userRouteUrl, {
@@ -8,7 +8,7 @@ function findAllUsers(processData) {
     })
         .then((response) => response.json())
         .then((data) => {
-            processData(data.Users);
+            processData(data);
         })
         .catch((error) => {
             console.error(
@@ -39,6 +39,7 @@ function findUserById(userId, processData) {
 }
 
 function createUser(user, updateFunction) {
+     console.log("Enviando para o backend:", user);
     fetch(userRouteUrl, {
         method: 'POST',
         headers: {
